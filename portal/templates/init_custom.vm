@@ -1,0 +1,10 @@
+#*
+This file allows you to override and define new Velocity variables.
+*#
+
+#set ($site_default_url = $propsUtil.get("company.default.home.url") )
+
+#set ($show_site_name = false)
+
+#set ( $logo_tool_tip_idx = $site_default_url.indexOf( '/',1 )+1 )
+#set ( $logo_tool_tip = $site_default_url.substring( $logo_tool_tip_idx ) )

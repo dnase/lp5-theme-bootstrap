@@ -1,0 +1,239 @@
+/* ----- all styles that are not affected by LTR/RTL locales ----- */
+
+
+/* --- Base styles --- */
+
+body {
+	background: url(../images/common/background-grainy.png) repeat;
+	font-size: 11px;
+}
+
+a {
+	color: #A91D65;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #4C215F;
+	text-decoration: none;
+}
+
+hr, .separator {
+	border-color: #BFBFBF transparent #FFF;
+	border-style: solid;
+	border-width: 1px 0;
+}
+
+
+
+/* --- header --- */
+
+.site-title {
+    margin: 0;
+    padding: 0;
+    height: 61px;
+    
+    background-image: linear-gradient(bottom, rgb(244,245,245) 2%, rgb(255,255,255) 35%);
+        background-image: -o-linear-gradient(bottom, rgb(244,245,245) 2%, rgb(255,255,255) 35%);
+        background-image: -moz-linear-gradient(bottom, rgb(244,245,245) 2%, rgb(255,255,255) 35%);
+        background-image: -webkit-linear-gradient(bottom, rgb(244,245,245) 2%, rgb(255,255,255) 35%);
+        background-image: -ms-linear-gradient(bottom, rgb(244,245,245) 2%, rgb(255,255,255) 35%);
+        
+        background-image: -webkit-gradient(
+        	linear,
+        	left bottom,
+        	left top,
+        	color-stop(0.02, rgb(244,245,245)),
+        	color-stop(0.35, rgb(255,255,255))
+);
+
+filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ffffff', endColorstr='#f4f5f5');/*For IE7-8-9*/
+}
+
+.logo {
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+/* --- end of header --- */
+
+
+
+
+/* --- dock bar --- */
+
+.dockbar {
+    background: none;
+    background-color: #999999;
+    font-size: 13px;
+    padding: 1px 5px;
+    position: relative;
+    z-index: 300;
+}
+
+.dockbar a {
+	color: #ffffff;
+	font-weight: bold;
+}
+
+/* --- end dock bar --- */
+
+
+
+
+/* --- portlet --- */
+
+.portlet-content, .portlet-minimized .portlet-content-container {
+	padding: 8px 8px 10px;
+}
+
+.portlet-content-wrapper {
+    padding: 10px;
+}
+
+
+
+
+
+
+
+/* --- TODO - make sure all ie styles still needs to be in place --- */
+
+.ie6 #wrapper {
+	width: 90%;
+}
+
+.ie6 #banner {
+	height: 1%;
+}
+
+.ie6 #banner h1.logo {
+	height: 1%;
+}
+
+
+/* -------- GCF External Systems Logout Modal Dialog CSS -------- */
+/* this is a modal popup that appears after user hits the Luminis Sign Out button if there are open GCF connections */
+/* see http://www.ericmmartin.com/projects/simplemodal/ for styling options */
+/* portlets that want to use simplemodal for a modal dialog can override the simplemodal classes defined below as needed */
+
+/* The modal div */
+#gcfLogoutExternalAppsDiv 
+{
+  display:none;
+}
+
+/* The modal div title bar */
+#gcfLogoutExternalAppsTitle
+{
+  background: url(../images/portlet/portlet-header-top-center.png) repeat-x;
+  line-height: 38px;
+  color: #005C96;
+  font-weight: bold;
+  min-width: 50%;
+  padding: 4px 0 0 15px;
+  font-size: 12px;
+}
+
+/* The modal div content */
+#gcfLogoutExternalAppsContent
+{
+  padding: 10px;
+}
+
+/* Overlay */
+#simplemodal-overlay 
+{
+  background-color:#000; 
+  cursor:wait;
+}
+
+/* Container */
+#simplemodal-container 
+{
+  height:250px; 
+  width:450px; 
+  color:#000; 
+  background-color:#FFF; 
+  border:4px solid #999; 
+  padding:0px;
+}
+#simplemodal-container .simplemodal-data 
+{
+  padding:0px;
+}
+#simplemodal-container code 
+{
+  background:#141414; 
+  border-left:3px solid #65B43D; 
+  color:#bbb; 
+  display:block; 
+  font-size:12px; 
+  margin-bottom:12px; 
+  padding:4px 6px 6px;
+}
+#simplemodal-container a 
+{
+  color:#ddd;
+}
+
+/* -------- End GCF External Systems Logout Modal Dialog CSS -------- */
+
+
+/* Search Style - using jquery plugin STARTS */
+
+.luminis-search-container {
+    padding:           2px 5px;
+    text-align:        left;
+    float:             left;
+    text-indent:       0;       
+}
+
+.luminis-search {   
+    border:            1px solid;
+    border-color:      #CCCCCC;
+    background-color:  #FFF;
+    width:             16.2em; 
+    height:            2.1em;   
+    padding:           0;
+    white-space:       nowrap;
+}
+
+.luminis-search input {     
+    border:            none;
+    height:            1.5em;
+    width:             13.8em;
+    padding-left:      2px;
+    padding-top:       5px;
+    padding-bottom:    0px;
+    font-family:       Arial, Helvetica, sans-serif;
+    font-size:         11px;
+    background-image:  none; 
+}
+
+.luminis-search input.focus {
+    background:     none;
+}
+
+.luminis-search a {
+    background-color:  #FFF;
+    background-repeat: no-repeat;
+    display:           inline-block; 
+    margin-left:       3px;
+    vertical-align:    bottom;
+    cursor:            pointer;
+    width:             1.5em;
+    height:            1.6em;  
+    font-size:         12px;  
+}
+
+.luminis-search a {
+    background-image:  url('/cps/images/search/luminis-search.png');    
+}
+
+.luminis-search a + a {
+    background-image:  url('/cps/images/search/luminis-filter-cross.png');
+    height:            1.3em; 
+}
+
+/* Search Style - using jquery plugin STARTS */

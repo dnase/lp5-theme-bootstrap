@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE plugin-package PUBLIC "-//Liferay//DTD Plugin Package 6.1.0//EN" "http://www.liferay.com/dtd/liferay-plugin-package_6_1_0.dtd">
+
+<plugin-package>
+	<name>LP5 Corp Theme With Bootstrap Theme</name>
+	<module-id>liferay/LP5-ellucian-theme-bootstrap/6.0.6.1/war</module-id>
+	<types>
+		<type>theme</type>
+	</types>
+	<tags></tags>
+	<short-description></short-description>
+	<long-description></long-description>
+	<change-log></change-log>
+	<page-url>http://www.liferay.com</page-url>
+	<author>Liferay, Inc.</author>
+	<licenses>
+		<license osi-approved="true">LGPL</license>
+	</licenses>
+	<liferay-versions>
+		<liferay-version>6.1.20+</liferay-version>
+	</liferay-versions>
+</plugin-package>

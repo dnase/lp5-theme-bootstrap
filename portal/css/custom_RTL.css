@@ -1,0 +1,580 @@
+@import "compass";
+
+@import url(custom_common.css);
+
+/* ----- this stylesheet is for the RTL styles, all that are not go in custom_common.css ----- */
+
+
+
+/* --- accessibility styles --- */
+
+#skip-to-content:focus {
+	clip: rect(auto auto auto auto);
+	right: 0;
+	z-index: 200;
+}
+
+#skip-to-content, #banner h2, #banner h3, #navigation h1, .site-breadcrumbs h1 {
+	clip: rect(0 0 0 0);
+	position: absolute;
+}
+
+.opens-new-window-accessible {
+	background: url(@theme_image_path@/common/open_window.png) no-repeat 0 50%;
+	display: inline-block;
+	font-size: 0;
+	height: 11px;
+	margin-left: 2px;
+	overflow: hidden;
+	text-indent: -9999px;
+	vertical-align: top;
+	width: 11px;
+}
+
+/* --- end accessibility styles --- */
+
+
+
+
+/* --- header --- */
+
+#banner {
+    background-image: linear-gradient(left , rgb(75,32,94) 19%, rgb(169,29,101) 60%, rgb(169,29,101) 80%);
+    background-image: -o-linear-gradient(left , rgb(75,32,94) 19%, rgb(169,29,101) 60%, rgb(169,29,101) 80%);
+    background-image: -moz-linear-gradient(left , rgb(75,32,94) 19%, rgb(169,29,101) 60%, rgb(169,29,101) 80%);
+    background-image: -webkit-linear-gradient(left , rgb(75,32,94) 19%, rgb(169,29,101) 60%, rgb(169,29,101) 80%);
+    background-image: -ms-linear-gradient(left , rgb(75,32,94) 19%, rgb(169,29,101) 60%, rgb(169,29,101) 80%);
+    
+    background-image: -webkit-gradient(
+    	linear,
+    	left top,
+    	right top,
+    	color-stop(0.19, rgb(75,32,94)),
+    	color-stop(0.6, rgb(169,29,101)),
+    	color-stop(0.8, rgb(169,29,101))
+);
+    height: auto;
+    position: relative;
+}
+
+/* --- end header --- */
+
+
+
+
+/* --- main navigation --- */
+
+#sign-in {
+	background: url(@theme_image_path@/common/key.png) no-repeat 3px 50%;
+	font-weight: bold;
+	padding: 5px 5px 5px 25px;
+	position: absolute;
+	right: 0;
+	top: -1.2em;
+}
+
+#navigation {
+    clear: both;
+    margin: 0 auto 5px;
+    min-height: 2.2em;
+    padding: 0 20px;
+        position: relative;
+        z-index: 1;
+        
+        background-image: linear-gradient(bottom, rgb(244,245,245) 30%, rgb(255,255,255) 80%);
+                background-image: -o-linear-gradient(bottom, rgb(244,245,245) 30%, rgb(255,255,255) 80%);
+                background-image: -moz-linear-gradient(bottom, rgb(244,245,245) 30%, rgb(255,255,255) 80%);
+                background-image: -webkit-linear-gradient(bottom, rgb(244,245,245) 30%, rgb(255,255,255) 80%);
+                background-image: -ms-linear-gradient(bottom, rgb(244,245,245) 30%, rgb(255,255,255) 80%);
+                
+                background-image: -webkit-gradient(
+                	linear,
+                	left bottom,
+                	left top,
+                	color-stop(0.30, rgb(244,245,245)),
+                	color-stop(0.80, rgb(255,255,255))
+    );
+    
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ffffff', endColorstr='#f4f5f5');/*For IE7-8-9*/
+}
+
+#navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 3px 3px 0 3px;
+}
+
+.ie7 #navigation ul {
+	padding: 2px;
+}
+
+#navigation li, #navigation a {
+	display: inline-block;
+}
+
+.ie6 #navigation li, .ie7 #navigation li, .ie6 #navigation a, .ie7 #navigation a {
+	display: inline;
+	zoom: 1;
+	z-index: 200;
+}
+
+#navigation li {
+	position: relative;
+	vertical-align: top;
+	border-right: solid 1px #CCC;
+}
+
+#navigation a {
+	color: #49225F;
+	font-size: 1.1em;
+	font-weight: bold;
+	margin: 0 1px;
+	padding: 11px 15px;
+	text-decoration: none;
+}
+
+.ie6 #navigation a, .ie7 #navigation a {
+	padding: 4px 15px;
+}
+
+#navigation .yui3-dd-drop a {
+	cursor: move;
+}
+
+#navigation li.hover .child-menu {
+	background: #1E2529;
+	display: block;
+	position: absolute;
+	width: 200px;
+	z-index: 250;
+}
+
+.ie6 #navigation ul.child-menu-visible, .ie6 #navigation li.hover .child-menu, .ie7 #navigation ul.child-menu-visible, .ie7 #navigation li.hover ul.child-menu {
+	left: 0;
+	top: 25px;
+}
+
+#navigation .child-menu {
+	display: none;
+}
+
+#navigation .child-menu li {
+	border-width: 0 0 1px;
+	display: block;
+	float: none;
+	margin: 0;
+}
+
+#navigation .child-menu li a {
+	cursor: pointer !important;
+}
+
+.ie7 #navigation .child-menu li a {
+	zoom: 1;
+}
+
+#navigation .child-menu li a:hover, #navigation li a.active {
+	background-color: #020509;
+}
+
+#navigation .child-menu .selected a {
+	background: #020509 url(@theme_image_path@/navigation/bullet_selected.png) no-repeat 5px 50%;
+}
+
+.nav-menu-style-arrows ul {
+	list-style-image: url(@theme_image_path@/navigation/bullet_selected.png);
+}
+
+#navigation .selected a, #navigation li.hover a, #navigation a:hover, #navigation a:focus, #navigation .child-menu li a, #navigation .yui3-dd-dragging, .lfr-navigation-proxy {
+	background: #999999;
+	color: #FFF;
+	outline: 0;
+	text-shadow: none;
+}
+
+/* --- end main navigation --- */
+
+
+
+
+/* --- breadcrumbs --- */
+
+.breadcrumbs-horizontal {
+	margin-bottom: 1.5em;
+}
+
+.breadcrumbs-horizontal li {
+	background: url(@theme_image_path@/arrows/05_right.png) no-repeat 100% 50%;
+	margin-right: 5px;
+	max-width: 50%;
+	padding-right: 15px;
+}
+
+.breadcrumbs-vertical li {
+	background: url(@theme_image_path@/arrows/07_down.png) no-repeat 50% 100%;
+	padding: 0 0 9px;
+	max-width: auto;
+}
+
+.breadcrumbs a {
+	display: block;
+}
+
+.breadcrumbs-vertical a {
+	text-align: center;
+	text-decoration: none;
+}
+
+.breadcrumbs .last {
+	background-image: none;
+}
+
+.breadcrumbs-horizontal .last {
+	margin-top: 0.2em;
+}
+
+.breadcrumbs-vertical .last {
+	font-weight: bold;
+}
+
+.breadcrumbs-horizontal .last a, .aui-tree-node-selected a {
+	color: #555;
+}
+
+.site-breadcrumbs {
+	margin: 0 0 5px;
+	width: auto;
+}
+
+.site-breadcrumbs ul {
+	background-color: #FFF;
+	border: 1px solid #DEDEDE;
+	border-color: #C0C2C5;
+	margin: 0;
+}
+
+.site-breadcrumbs li {
+	background-image: none;
+	margin-right: 0;
+	padding-left: 2.75em;
+	padding-right: 0;
+}
+
+.site-breadcrumbs li span {
+	background: url(@theme_image_path@/common/breadcrumbs.png) no-repeat 100% 50%;
+	display: block;
+	padding: 0.5em 15px 0.5em 0;
+}
+
+.site-breadcrumbs li span a {
+	text-decoration: none;
+}
+
+.site-breadcrumbs li.first a {
+	color: #4C215F;
+	font-weight: bold;
+}
+
+.site-breadcrumbs li.last a {
+	color: #4C215F;
+	font-size: 1.3em;
+}
+
+.site-breadcrumbs .last {
+	font-size: 1em;
+	margin-top: 0;
+	padding-right: 0;
+}
+
+.site-breadcrumbs .last span {
+	background-image: none;
+	padding: 0;
+}
+
+/* --- end breadcrumbs --- */
+
+
+
+
+/* --- action menu --- */
+
+.action-menu-wrapper { /* Fix for IE z-index problem */
+    position:   relative;
+    top: -4px;
+    left: 0;
+    z-index:    1;
+    padding-bottom: 24px;
+    margin-top: 10px;
+}
+
+.action-menu-wrapper ul {
+    position:   absolute;
+    background: url(../images/portlet/action-bar-bg.png) repeat-x;
+    width:     100%;
+}
+
+.action-menu-wrapper li {
+    float: right;
+}
+
+.portlet-action-menu, .portlet-action-menu * {
+    margin:         0;
+    padding:        0;
+    list-style:     none;
+}
+
+.portlet-action-menu {
+    float:          left;
+    margin-bottom:  1em;
+    line-height:    1.0;
+}
+
+.portlet-action-menu ul {
+    position:       absolute;
+    top:            -999em;
+    width:          12.5em; /* left offset of submenus need to match (see below) */
+}
+
+.portlet-action-menu ul li {
+    width:          112%;
+    float:          left;
+}
+
+.portlet-action-menu li {
+    float:          right;
+    position:       relative;
+    background:     transparent url("../images/portlet/action-bar-divider.png") no-repeat;      
+}
+
+.portlet-action-menu li li {
+    background:     #a7a7a7;
+    border:         1px solid #FFF;
+    border-bottom: none;
+}
+
+.portlet-action-menu li li li {
+    background:     #a7a7a7;
+    right:          1.7em;
+    border:         1px solid #FFF;
+    border-bottom: none;
+}
+
+.portlet-action-menu li:hover {
+    visibility:     inherit; /* fixes IE7 'sticky bug' */
+}
+
+.portlet-action-menu a {
+    display:        block;
+    position:       relative;
+    padding:        .75em 1em;
+    text-decoration:none;
+    color:          #fff;
+    font-weight:    bold;
+    white-space:    nowrap;
+    cursor:         pointer;
+}
+
+.portlet-action-menu li ul {
+    right:          1.6em;
+}
+
+.portlet-action-menu li:hover ul,
+.portlet-action-menu li.sfHover ul {
+    right:          1.6em;
+    top:            2.4em; /* match top ul list item height */
+    z-index:        99;
+}
+
+ul.portlet-action-menu li:hover li ul,
+ul.portlet-action-menu li.sfHover li ul {
+    top:            -999em;
+}
+
+ul.portlet-action-menu li li:hover ul,
+ul.portlet-action-menu li li.sfHover ul {
+    left:           -12.5em; /* match ul width */
+    top:            -1px;
+}
+
+ul.portlet-action-menu li li:hover li ul,
+ul.portlet-action-menu li li.sfHover li ul {
+    top:            -999em;
+}
+
+ul.portlet-action-menu li li li:hover ul,
+ul.portlet-action-menu li li li.sfHover ul {
+    left:           -12.5em; /* match ul width */
+    top:            0;
+}
+
+.portlet-action-menu li:hover, .portlet-action-menu li.sfHover, 
+.portlet-action-menu a:focus, .portlet-action-menu a:hover, .portlet-action-menu a:active {
+    background:     #C0C0C0;
+    outline:        0;
+    color:          #0066CC;
+}
+
+/* --- end action menu --- */
+
+
+/* default values for text align */
+
+.horizontal-align-default {
+    align: right;
+    text-align: right;
+}
+
+.horizontal-align-reverse {
+    align: left;
+    text-align: left;
+}
+
+.horizontal-float-default {
+    float:right;
+}
+
+.horizontal-float-reverse {
+    float:left;
+}
+
+.horizontal-padding-default{
+    padding-right:10px;  
+}
+
+.horizontal-padding-reverse{
+    padding-left:10px;  
+}
+
+/* -- Portlet messages --*/
+
+.portlet-msg {
+	background-position: right 6px center;
+	padding: 6px 30px 6px 6px;
+	text-align: right;
+}
+
+.portlet-msg-alert {
+	background-position: right 6px 20%;
+}
+	
+/* ----- Confirmation alert box ----- */
+
+div.extblue {
+    text-align: right;	
+}
+
+div.extblue .extblueclose {
+	text-align: left;
+}
+
+
+/* Search plugin style specific to RTL */
+
+.luminis-search-container {
+	float:             right;
+}
+
+
+/* --- portlet wrapper and icons --- */
+
+.portlet-layout {
+    margin-top: 25px;
+    margin-left: 20px;
+    width: 97%;
+}
+
+.portlet {
+	background-color: #ffffff;
+	margin: 0 0 10px;
+	text-align: left;
+	border: 1px solid #BEBFC1;
+}
+
+.portlet-topper {
+	background: #D4D4D4 url(@theme_image_path@/portlet/header_bg.png) repeat-x 0 0;
+	border: none;
+	font-size: 1.1em;
+}
+
+.portlet-title {
+	float: none;
+	font-weight: bold;
+	min-width: 50%;
+	padding: 5px;
+	text-shadow: 1px 1px #FFF;
+}
+
+.lfr-portlet-title-editable {
+	margin-top: -4px;
+	z-index: 9999;
+}
+
+.ie .lfr-portlet-title-editable {
+	margin-top: -6px;
+}
+
+.lfr-portlet-title-editable-content {
+	padding: 0;
+}
+
+.ie .lfr-portlet-title-editable-content {
+	margin-top: 4px;
+}
+
+.portlet-icons {
+	float: none;
+}
+
+.portlet-icons .portlet-close-icon {
+	border-width: 0;
+}
+
+.page-maximized .portlet-icons {
+	font-size: 11px;
+}
+
+.portlet-icon-back {
+}
+
+.ie .portlet-title {
+	padding-bottom: 5px;
+}
+
+.ie6 .portlet-topper {
+	zoom: 1;
+}
+
+/* --- end portlet wrapper and icons --- */
+
+
+
+
+/* --- footer --- */
+
+#footer {
+	text-align: left;
+	color: #333333;
+	height: 38px;
+	background-image: linear-gradient(bottom, rgb(244,245,245) 30%, rgb(255,255,255) 80%);
+	            background-image: -o-linear-gradient(bottom, rgb(244,245,245) 30%, rgb(255,255,255) 80%);
+	            background-image: -moz-linear-gradient(bottom, rgb(244,245,245) 30%, rgb(255,255,255) 80%);
+	            background-image: -webkit-linear-gradient(bottom, rgb(244,245,245) 30%, rgb(255,255,255) 80%);
+	            background-image: -ms-linear-gradient(bottom, rgb(244,245,245) 30%, rgb(255,255,255) 80%);
+	            
+	            background-image: -webkit-gradient(
+	            	linear,
+	            	left bottom,
+	            	left top,
+	            	color-stop(0.30, rgb(244,245,245)),
+	            	color-stop(0.80, rgb(255,255,255))
+);
+
+filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ffffff', endColorstr='#f4f5f5');/*For IE7-8-9*/
+}
+
+.ellucian-copyright {
+padding-top: 10px;
+padding-right: 10px;
+}
+
+/* --- end footer --- */
