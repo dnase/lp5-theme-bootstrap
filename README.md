@@ -11,3 +11,5 @@ jar -cvf LP5_Corp_Bootstrap.war *
 the .war can then be deployed to $CP_ROOT/products/liferay/liferay-admin/deploy (admin server[s]) and $CP_ROOT/products/liferay/liferay-portal/deploy (web server[s])
 
 In order to get this to work, you need a layout that will make use of the responsive theme. I would recommend creating your own bootstrap display template, or using Dustin Sier's (https://github.com/MiracleManS/Liferay-Luminis-Bootstrap-Layouts)
+
+This is very barebones. You'll need to add your own grid sizing for the template to truly be responsive.
